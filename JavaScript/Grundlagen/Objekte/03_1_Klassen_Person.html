@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(firstname, lastname) {
+          this.firstname = firstname;
+          this.lastname = lastname;
+        }
+
+        fullname() {
+          return this.firstname + this.lastname;
+        }
+      }
+
+      let p1 = new Person("Tim", "Tester");
+      console.log(p1);
+
+      //Vererbung
+      class Worker extends Person {
+        constructor(firstname, lastname, pid) {
+          super(firstname, lastname);
+          this.pid = pid;
+        }
+      }
+
+      let w1 = new Worker("Will", "Worker", 42);
+      console.log(w1);
+      console.log(w1.fullname());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konstruktor Funktion</title>
+  </head>
+  <body>
+    <script>
+      function Car(color) {
+        this.color = color;
+        this.honk = function () {
+          window.alert("WhoopWhoop");
+        };
+      }
+
+      Car.prototype.showColor = function () {
+        console.log(this.color);
+      };
+
+      let myCar = new Car("red");
+
+      console.log(myCar);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto</title>
+  </head>
+  <body>
+    <script>
+      let myCar = {
+        brand: "Ferrari",
+        color: "red",
+        hp: "655",
+        speed: 0,
+        setColor: (color) => {
+          this.color = color;
+        },
+        honk: () => {
+          console.log("Hup Hup");
+        },
+        accelerate: () => {
+          this.speed = this.speed + 3;
+        },
+        brake: () => {
+          this.speed = this.speed - 3;
+          if (this.speed < 0) {
+            this.speed = 0;
+          }
+        },
+        showSpeed: () => {
+          console.log(this.speed);
+        },
+      };
+
+      myCar.color("black");
+      myCar.honk();
+      myCar.accelerate();
+      myCar.accelerate();
+      myCar.showSpeed();
+      my.brake();
+      myCar.accelerate();
+    </script>
+  </body>
+</html>

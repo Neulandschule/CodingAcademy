@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Konstruktor Funktion</title>
+  </head>
+  <body>
+    <script>
+      /*
+       * Funktion
+       */
+      /*       function createPerson(firstname, lastname) {
+        return {
+          firstname: firstname,
+          lastname: lastname,
+          fullname: function () {
+            return this.firstname + " " + this.lastname;
+          },
+        };
+      }
+
+      let p1 = createPerson("Tim", "Tester");
+      let p2 = createPerson("Jim", "Tester");
+      console.log(p1);
+      console.log(p1.name);
+      console.log(p1.fullname()); */
+
+      /*
+       * Konstruktor
+       */
+
+      function Person(firstname, lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.fullname = function () {
+          return this.firstname + " " + this.lastname;
+        };
+      }
+
+      let p1 = new Person("Tim", "Tester");
+      let p2 = new Person("Jim", "Tester");
+      console.log(p1);
+
+      /*
+       * Prototyp
+       * -> in console.log() sichtbar
+       */
+      console.log(p1);
+      console.log(p1.toString());
+
+      Person.prototype.fullname = function () {
+        return this.firstname + " " + this.lastname;
+      };
+
+      console.log(p1);
+      console.log(p1.fullname());
+
+      /*
+       * Vererbung
+       */
+      //Vererbung
+      function Worker(firstname, lastname, pid) {
+        Person.call(this, firstname, lastname);
+        this.pid = pid;
+      }
+      Worker.prototype = Person.prototype;
+
+      let w1 = new Worker("Willi", "Worker", 42);
+
+      //Übung Customer
+    </script>
+  </body>
+</html>

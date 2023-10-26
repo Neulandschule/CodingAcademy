@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obstkorb</title>
+  </head>
+  <body>
+    <script>
+      /*
+       *    Aufgabe 1
+       *    Erstelle ein Varible 'obstkorb' ohne ihr einen Wert zuzuweisen.
+       *    Gib den Datentyp in der Console aus.
+       */
+
+      /*
+       *    Aufgabe 2
+       *    Weise Varible 'obstkorb' ein leeres Array zu.
+       *    Gib den Datentyp in der Console aus.
+       */
+
+      /*
+       *    Aufgabe 3
+       *    Weise Varible 'obstkorb' ein neues Array zu mit den Werten 'Apfel', 'Banane' und 'Ananas' zu.
+       *    Gib die Variable in der Console aus.
+       */
+
+      /*
+       *    Aufgabe 4
+       *    Gib die Länge von 'obstkorb' in der Console aus.
+       */
+
+      /*
+       *    Aufgabe 5
+       *    Erstelle eine Funktion 'showFirstItem(arr)', welche das erste Item in der Console anzeigt.
+       *    Rufe die Funktion mit 'obstkorb' als Argument auf. (Argument = Wert des Parameters)
+       */
+
+      /*
+       *    Aufgabe 6
+       *    Erstelle eine Funktion 'showLastItem(arr)', welche das erste Item in der Console anzeigt.
+       *    Rufe die Funktion mit 'obstkorb' als Argument auf. (Argument = Wert des Parameters)
+       */
+
+      /*
+       *    Aufgabe 7
+       *    Erstelle eine Funktion 'showItem(arr, index)', welche das Item von einer
+       *    bestimmten Indexposition in der Console anzeigt.
+       *    Rufe die Funktion mit 'obstkorb' und '1' als Argumente auf.
+       */
+
+      /*
+       *    Aufgabe 8
+       *    Erstelle eine Funktion 'showAllItem(items)', welche alle Elemente der Reihe nach anzeigt.
+       *    Verwende dabei while - Schleife.
+       *    Rufe die Funktion mit 'obstkorb' als Argument auf.
+       */
+
+      /*
+       *    Aufgabe 9
+       *    Erstelle eine Funktion 'showAllItemLoops(items, loopNr)', welche alle Elemente der Reihe nach anzeigt.
+       *    Der Parameter 'loopNr' soll entscheiden, wie die Ausgabe erfolgen soll.
+       *    1 - For-Schleife
+       *    2 - For...in Schleife
+       *    3 - For...of Schleife
+       *    Andere Zahlen - Ausgabe der items-Variable
+       *    Teste die Funktion mit den möglichen loopNr-Argumenten. (1, 2 und 3 sollen das selbe Ergbnis liefern)
+       */
+
+      /*
+       *    Aufgabe 10
+       *    Erstelle eine Variable 'beerenkorb' mit folgenden Items: 'Himbeere' und 'Blaubeere'
+       *    Nutze die vorhandene Funktion showAllItem() um dir das Ergebnis anzusehen.
+       */
+
+      /*
+       *    Aufgabe 11
+       *    Erstelle eine funktion getItem(items, index), welche den Wert des Items an der Position 'index'
+       *    als RETURN zurückgibt.
+       *    Nutze die Funktion, um vom 'obstkorb' das Obst auf index '0' zu bekommen.
+       *    Der Wert soll in der Variable 'vorspeise' gespeichert werden.
+       *    Gib 'vorspeise' in der Console aus.
+       */
+
+      /*
+       *    Aufgabe 12
+       *    Erstelle eine Funktion addItem(items, item_name), welche dem Array 'items' einen Wert hinzufügt.
+       *    Verwende keine vorgefertigte Funktion (push) sondern nütze den letzten freien Index.
+       *    Rufe die Funktion dreimal auf und füge 'obstkorb' folgendes hinzu: 'Birne', 'Apfel' und 'Wurst'
+       *    Überprüfe das Ergebnis in dem du dir 'obstkorb' in der Console ansiehst.
+       */
+
+      /*
+       *    Aufgabe 13
+       *    Erstelle eine Funktion removeLastItem(items), welche das letzte Item entfernt.
+       *    Verwende keine vorgefertigte Funktion (slice) sondern reduziere die Länge des Arrays um 1.
+       *    Rufe die Funktion mit dem Argument 'obstkorb' auf.
+       *    Überprüfe das Ergebnis in dem du dir 'obstkorb' in der Console ansiehst.
+       */
+
+      /*
+       *    Aufgabe 14
+       *    Erstelle eine Funktion changeItem(items, index, item_name), welche den Wert an der
+       *    Position 'index' durch 'item_name' ersetzt.
+       *    Nütze die Funktion, um 'obstkorb' an 'index 2' den Wert mit 'Apfel' zu ersetzen.
+       *    Überprüfe das Ergebnis in dem du dir 'obstkorb' in der Console ansiehst.
+       */
+
+      /*
+       *    Aufgabe 15
+       *    Erstelle eine Funktion hasItem(items, item_name), welche prüft ob 'item_name'
+       *    als Wert in 'items' vorkommt.
+       *    Wird der Wert erkannt, soll sofort der Boolean 'true' zurückgegben werden.
+       *    Falls der Wert nicht vorhanden ist soll der Boolean 'false' zurückgegeben werden.
+       *    Erstelle eine Variable 'has_apfel' und verwende die Funktion um zu prüfen ob
+       *    im 'obstkorb' eine 'Banane' vorhanden ist.
+       *    Erstelle eine Variable 'has_hamburger' und verwende die Funktion um zu prüfen ob
+       *    im 'obstkorb' ein 'Hamburger' vorhanden ist.
+       *    Gib die beiden Variablen in der Console aus.
+       */
+
+      /*
+       *    Aufgabe 16
+       *    Erstelle eine Funktion countItem(items, item_name), welche zählt, wie oft 'item_name'
+       *    als Wert im Array vorkommt.
+       *    Gib die Anzahl als RETURN-Wert zurück.
+       *    Erstelle eine Variable 'anzahl_apfel' und verwende die Funktion um 'Apfel' in 'obstkorb'
+       *    zu zählen.
+       *    Gib 'anzahl_apfel' in der Console aus.
+       */
+
+      /*
+       *    Aufgabe 17
+       *    Erstelle eine Variable mit dem Name 'search_item' und den Wert 'Apfel'.
+       *    Überprüfe mit einer If-Bedingung und der Funktion hasItem(), of 'search_item'
+       *    in 'obstkorb' vorhanden ist.
+       *    Falls dies der Fall ist, soll die Anzahl mit der Funktion countItems() gezählt werden.
+       *    Gib Text in der Console aus: "Es befinden sich [anzahl] [search_items] im Obstkorb".
+       *    Falls dies nicht der Fall ist, soll einfach folgender Text ausgegeben werden:
+       *    "Keine [search_items] vorhanden"
+       *    Mache die Gegenkontrolle, indem die 'search_item' auf 'Schnitzerl' änderst.
+       */
+
+      /*
+       *    Aufgabe 18
+       *    Erstelle eine Funktion removeItems(items, item_name). Die Funktion soll ein leeres Array
+       *    mit dem Namen 'new_arr' erstellen.
+       *    Dieses neue Array soll mit den Werten des vom Parameter 'items', nur ohne 'item_name'
+       *    gefüllt werden
+       *    'new_arr' soll als RETURN zurückgegeben werden.
+       *    Führe die Funktion mit 'obstkorb' und 'Apfel' durch und weise den Rückgabewert 'obstkorb' selbst zu.
+       *    Gib 'obstkorb' in der Console aus.
+       */
+
+      /*
+       *    Aufgabe 19
+       *    Erstelle eine Funktion reverseArray(items). Die Funktion soll ein leeres Array
+       *    mit dem Namen 'reverse_arr' erstellen.
+       *    Dieses neue Array soll mit den Werten des vom Parameter 'items' in imgekehrter
+       *    Reihenfolge gefüllt werden.
+       *    'reverse_arr' soll als RETURN zurückgegeben werden.
+       *    Führe die Funktion mit 'obstkorb' durch und weise den Rückgabewert 'obstkorb' selbst zu.
+       *    Gib 'obstkorb' in der Console aus.
+       */
+
+      /*
+       *    Aufgabe 20
+       *    Erstelle eine Funktion connectArrays(arr1, arr2). Die Funktion soll ein leeres Array
+       *    mit dem Namen 'new_arr' erstellen.
+       *    Dieses neue Array soll mit den Werten der Parameter 'arr1' und 'arr2' gefüllt werden.
+       *    'new_arr' soll als RETURN zurückgegeben werden.
+       *    Erstelle eine neue Variable 'obstsalat'. Nütze die Funktion connectArrays() um ein
+       *    Array mit 'obstkorb' und 'beerenkorb' zu erstellen.
+       *    Weise dieses Array 'obstsalat' zu und gib das Ergebnis in der Console aus.
+       */
+    </script>
+  </body>
+</html>

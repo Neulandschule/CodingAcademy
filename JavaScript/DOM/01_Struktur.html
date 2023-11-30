@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ich bin ein Titel</title>
+  </head>
+  <body>
+    <h1>Ich bin eine Überschrift</h1>
+    <div>
+      <p id="p1" class="para">Ich bin <strong>Paragraph</strong> 1</p>
+    </div>
+    <div>
+      <p class="para">Ich bin Paragraph 2</p>
+    </div>
+    <!-- Ich bin ein Kommentar -->
+
+    <script>
+      /*
+       * Dokument
+       */
+      //console.log(document);
+      //console.dir(document);
+
+      /*
+       * Hauptelement
+       */
+      //console.log(document.all);
+      //console.log(document.title);
+      //console.log(document.head);
+      //console.log(document.body);
+
+      /*
+       * Kinder
+       */
+      //console.dir(document.body);
+
+      // ** Knoten
+      //console.log(document.body.childNodes);
+      //console.log(document.body.firstChild);
+      //console.log(document.body.childNodes[0]);
+
+      // ** Elemente
+      //console.log(document.body.children);
+      //console.log(document.body.firstElementChild);
+      //console.log(document.body.children[0]);
+      //console.log(document.body.lastElementChild);
+
+      //for (let i = 0; i < document.body.children.length; i++) {
+      //  console.log(document.body.children[i]);
+      //}
+
+      /*
+       * Geschwister
+       */
+      console.log(document.body.children[1]);
+      console.log(document.body.children[1].previousElementSibling);
+      console.log(document.body.children[1].nextElementSibling);
+
+      /*
+       * Eltern
+       */
+      console.log(document.body.children[1].parentElement);
+
+      /*
+       * Direktauswahl Einzel
+       */
+      console.log(p1); //Problem p-1
+      console.log(document.getElementById("p1"));
+
+      /*
+       * Direktauswahl Mehrfach
+       */
+      console.log(document.getElementsByTagName("p"));
+      console.log(document.getElementsByClassName("para"));
+
+      /*
+       * Direktauswahl CSS
+       */
+      console.log(document.querySelector("#p1"));
+      console.log(document.querySelectorAll("p"));
+      console.log(document.querySelectorAll(".para"));
+    </script>
+  </body>
+</html>

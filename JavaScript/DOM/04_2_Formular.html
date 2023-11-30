@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" name="myForm" id="myForm">
+      <input type="text" name="firstname" value="tim" />Vorname <br />
+      <input type="text" name="lastname" />Nachname <br />
+    </form>
+    <input type="button" id="extern_btn" value="Externer Button" />
+
+    <script>
+      myForm = document.getElementById("myForm");
+      console.log(myForm);
+      console.dir(myForm);
+      console.dir(myForm.elements);
+      console.dir(myForm.firstname.value);
+
+      console.dir(myForm.firstname);
+      myForm.firstname.onfocus = () => console.log("Vorname gewählt");
+      myForm.lastname.onfocus = () => console.log("Nachname gewählt");
+      myForm.lastname.onblur = () => console.log("Nachname verlassen");
+      myForm.lastname.oninput = (e) => console.log(e.target.value);
+      myForm.lastname.focus();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" name="myForm">
+      <input type="text" name="firstname" value="tim" />Vorname <br />
+      <input type="text" name="lastname" />Nachname <br />
+
+      <input type="color" name="color" />Farbe <br />
+      <textarea name="text" id="" cols="30" rows="10">Hier Text</textarea><br />
+
+      <input type="checkbox" name="check" />Checkbox<br />
+
+      <input type="radio" name="rad" id="rad1" value="a1" />Auswahl 1 <br />
+      <input type="radio" name="rad" id="rad2" value="a2" />Auswahl 2 <br />
+
+      <select name="mySelect" id="">
+        <option value="o1">Option 1</option>
+        <option value="o2">Option 2</option>
+      </select>
+    </form>
+
+    <input type="button" id="extern_btn" value="Externer Button" />
+
+    <script>
+      const extern_btn = document.getElementById("extern_btn");
+      extern_btn.addEventListener("click", getFormDataExtern);
+
+      function getFormDataExtern() {
+        let firstname = document.getElementsByName("firstname")[0];
+        let lastname = document.getElementsByName("lastname")[0];
+        console.dir(firstname);
+        console.log(`${firstname.value} ${lastname.value}`);
+
+        let color = document.getElementsByName("color")[0];
+        console.log(color.value);
+
+        let text = document.getElementsByName("text")[0];
+        console.log(text.value);
+
+        let check = document.getElementsByName("check")[0];
+        console.log(check.checked);
+
+        let rad1 = document.getElementsByName("rad")[0];
+        console.log(rad1.checked);
+        let rad2 = document.getElementsByName("rad")[1];
+        console.log(rad2.checked);
+
+        let rads = document.getElementsByName("rad");
+        for (let rad of rads) {
+          if (rad.checked) {
+            console.log(rad.value);
+          }
+        }
+
+        let mySelect = document.getElementsByName("mySelect")[0];
+        console.log(mySelect.value);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="seite2.html" name="myForm" id="myForm">
+      <input type="text" name="firstname" value="tim" />Vorname <br />
+      <input type="text" name="lastname" />Nachname <br />
+      <input type="submit" />
+    </form>
+
+    <script>
+      myForm = document.getElementById("myForm");
+
+      //myForm.submit();
+
+      myForm.onsubmit = (e) => {
+        e.preventDefault();
+        if (validate()) {
+          console.log("senden");
+        }
+      };
+
+      function validate() {
+        if (myForm.lastname.value == "") {
+          console.log("Nachname Fehlt");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

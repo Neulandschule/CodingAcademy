@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .bold {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p id="p1">Paragraph 1</p>
+      <p id="p2">Paragraph 2</p>
+    </div>
+
+    <script>
+      /*
+       * Element
+       */
+      const myContiner = document.getElementById("container");
+      const myP1 = document.getElementById("p1");
+      const myP2 = document.getElementById("p2");
+      //console.log(myP1);
+      //console.dir(myP1);
+
+      //Inhalt
+      //console.log(myP1.innerText);
+      //console.log(myP1.innerHTML);
+
+      //myP1.innerText = "Hallo Welt";
+      //myP1.innerText = myP1 + "Hallo Welt";
+
+      //myP1.innerText = "<strong>Hallo</strong> Welt";
+      //myP1.innerHTML = "<strong>Hallo</strong> Welt";
+
+      /*
+       * Attribute
+       */
+      // id, style, title, lang, dir und class
+      //console.log(myP1.id);
+      //myP1.style.color = "#ff0000";
+
+      //console.log(myP1.getAttribute("id"));
+      //myP1.setAttribute("style", "color: #00ff00");
+      //myP1.setAttribute("class", "red");
+      //myP1.classList.add("bold");
+      //myP1.classList.remove("red");
+      //myP1.removeAttribute("class");
+
+      /*
+       * Elemente
+       */
+      //const myH = document.createElement("h1");
+      //myH.innerText = "Meine Heading";
+      //myContiner.append(myH);
+      //myContiner.prepend(myH);
+      //myContiner.insertBefore(myH, myP2);
+      //myContiner.replaceChild(myH, myP2);
+      //myP1.remove();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    p {
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <p onclick="runEvent('Hallo Welt')">onclick</p>
+    <p onmouseover="runEvent('Hallo Welt')">onmouseover</p>
+    <p onmouseout="runEvent('Hallo Welt')">onmouseout</p>
+    <p onmousedown="runEvent('Hallo Welt')">onmousedown</p>
+    <p onmouseup="runEvent('Hallo Welt')">onmouseup</p>
+    <p ondblclick="runEvent('Hallo Welt')">ondblclick</p>
+    <hr />
+    <input id="btn1" type="button" data="Hallo" value="Klick mich" />
+    <hr />
+    <input id="btn2" type="button" value="Klick mich 2" />
+  </body>
+
+  <script>
+    /*
+     * HTML Attribute
+     */
+    function runEvent(p) {
+      console.log("Run Event");
+      console.log(p);
+      console.log(event);
+      console.log(event.target);
+    }
+
+    /*
+     * JavaScript Event
+     */
+    btn1 = document.getElementById("btn1");
+    btn1.onclick = function () {
+      console.log(event);
+      console.log(event.target);
+      console.log(this);
+      console.log(this.getAttribute("data"));
+    };
+
+    btn1.onmousedown = () => {
+      console.log("down");
+    };
+
+    btn1.onmouseup = () => console.log("up");
+
+    btn1.ondblclick = runEvent;
+
+    /*
+     * Event Listener
+     */
+    const btn2 = document.getElementById("btn2");
+    btn2.addEventListener("click", runEvent);
+    btn2.addEventListener("click", () => {
+      console.log("click Listener");
+    });
+
+    btn2.removeEventListener("click", runEvent);
+  </script>
+</html>

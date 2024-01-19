@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Php als Templatesprache</title>
+  <style>
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Überschrift</h1>
+  <h1><?php echo 'Überschrift 2' ?></h1>
+  <?php echo '<h1>Überschrift 3</h1>' ?>
+
+
+  <?php $classname = 'red' ?>
+
+  <div class="<?php echo $classname ?>">
+    Mein Div 1
+  </div>
+
+  <div class="<?= $classname ?>">
+    Mein Div 2
+  </div>
+
+  <?php #include "01_Ausgabe.php" ?>
+  <?php #include_once "01_Ausgabe.php" ?>
+
+  <!--
+  Aufgaben
+  1. Gib "Coding Academy" in einem <h2>-Tag auf 2 verschiednene Arten aus.
+  2. Füge eine CSS-Klasse 'blue' für blaue Schriftfarbe hinzu und ändere $classname
+  -->
+
+</body>
+
+</html>

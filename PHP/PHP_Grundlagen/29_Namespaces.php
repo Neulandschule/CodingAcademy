@@ -4,6 +4,7 @@
 */
 include '25_Objekte.php';
 
+#use objekte\Person;
 #use objekte\Person as Person2;
 
 

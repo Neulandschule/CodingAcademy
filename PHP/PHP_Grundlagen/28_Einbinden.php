@@ -1,8 +1,14 @@
 <?php
-include '25_Objekte.php';
+include '26_Objekte.php';
 /*
 * Include Require
 */
 
-$p = new Person();
-var_dump($p);
+//Echoausgabe funtioniert
+
+//Objekt brauch Namespace
+#$p = new Person('Tim');
+#var_dump($p);
+
+
+

@@ -23,8 +23,8 @@ namespace objekte;
 
 - Was gibt es sonst noch? Abstrakte Klassen, Interfaces, Traits
 
-
 */
+echo "test";
 
 class Person
 {
@@ -49,8 +49,11 @@ class Person
     {
         $this->name = $name;
     }
-}
+} 
 
+
+
+/* 
 class Customer extends Person
 {
     public $c_nr;
@@ -74,18 +77,25 @@ class Customer extends Person
         echo "Servus. Ich bin " . $this->getName();
     }
 }
+ */
 
-$p1 = new Person('Tim');
-$p2 = new Customer('Tom', 4);
 
-var_dump($p2);
+#$p1 = new Person('Tim');
+#var_dump($p1);
+#echo $p1->name;
 #$p1->name = 'Timmy';
 #echo $p1->name;
 #echo $p1->greed();
+
+#$p2 = new Customer('Tom', 4);
+#var_dump($p2);
+
+
+
 #$p1->greed('Hallo');
 
 #$p1->setName('Timmy');
 #echo $p1->getName();
 
 #$p2->greed('Hi');
-$p2->customerGreed('Hi');
+#$p2->customerGreed('Hi');

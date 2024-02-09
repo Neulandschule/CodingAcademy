@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+    1. ACTION   (Datei am Server)
+    2. METHODE  (GET/POST)
+    3. NAMEN    (Attribut)
+    4. SUBMIT   (Sendet das Formular)
+-->
+<body>
+    <h1>Formulare</h1>
+
+    <form id="myForm" action="01_html_to_php.php" method="GET">
+        <label for="text_id">Input</label>
+        <input type="text" id="text_id" name="inputtext">
+        <p>
+            <input type="submit" value="Formular senden">
+        </p>
+    </form>
+
+    <a href="#" onclick="document.getElementById('myForm').submit()">Submit Link</a>
+</body>
+</html>

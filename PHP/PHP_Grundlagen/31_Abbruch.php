@@ -11,7 +11,8 @@ echo 'C';
 
 
 $var;
+#echo $var;
 #echo $var or die('Vorbei');
 
 // @ - Operator
-echo @$var;
+#echo @$var;

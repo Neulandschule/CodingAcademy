@@ -1,6 +1,6 @@
 <?php
 
-namespace objekte;
+namespace personen_objecte;
 /*
 * Objekte
 
@@ -24,6 +24,7 @@ namespace objekte;
 - Was gibt es sonst noch? Abstrakte Klassen, Interfaces, Traits
 
 */
+
 echo "test";
 
 class Person
@@ -52,8 +53,6 @@ class Person
 } 
 
 
-
-/* 
 class Customer extends Person
 {
     public $c_nr;
@@ -69,33 +68,40 @@ class Customer extends Person
         #return $this->c_nr;
         #return parent::getName();
         return $this->name;
-        #return self::$name;
     }
 
     function customerGreed()
     {
-        echo "Servus. Ich bin " . $this->getName();
+        echo "Servus. Ich bin " . $this->getName() . ' und habe die Nummer ' . $this->c_nr;
     }
 }
- */
+ 
 
 
 #$p1 = new Person('Tim');
 #var_dump($p1);
 #echo $p1->name;
 #$p1->name = 'Timmy';
+#$p1->setName('Timmy');
 #echo $p1->name;
-#echo $p1->greed();
+#$p1->greed('Servus');
 
 #$p2 = new Customer('Tom', 4);
 #var_dump($p2);
-
-
-
-#$p1->greed('Hallo');
-
-#$p1->setName('Timmy');
-#echo $p1->getName();
-
+#echo $p2->getName();
 #$p2->greed('Hi');
 #$p2->customerGreed('Hi');
+
+
+/*
+* Aufgaben
+*
+* 1.    Änderungen Klasse CUSTOMER
+*       - Füge das Attribut "age" hinzu
+*       - Passe den Konstruktor an
+*       - Erstelle eine Methode customAgeGreed(), bei denen das Object ihren Namen und Alter sagt
+*
+* 2.    OBJEKTERSTELLUNG
+*       ERstelle eine neues Customer Objekt $p3 und führe die customAgeGreed() Methode aus.
+*
+*/

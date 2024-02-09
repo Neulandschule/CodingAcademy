@@ -14,6 +14,14 @@ function divide($x, $y)
 
 $num = 0;
 
+/* Ohne Try-Catch */
+/*
+$result = divide(8, $num);
+echo $result;
+*/
+
+/* Mit Try-Catch */
+/*
 try {
     $result = divide(8, $num);
     #echo 4 / 0;
@@ -24,10 +32,8 @@ try {
 } finally {
     echo 'FINALLY';
 }
-
-
 echo $result;
-
+*/
 
 
 /*

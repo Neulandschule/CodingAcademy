@@ -2,23 +2,24 @@
 /*
 * Namespace
 */
-include '25_Objekte.php';
+include '26_Objekte.php';
 
-#use objekte\Person;
-#use objekte\Person as Person2;
+#use personen_objecte\Person;
+#use personen_objecte\Person as Person2;
 
-
+/*
 class Person
 {
-    public $firstname = 'Bobo';
+    public $name = 'Bobo';
+
 }
+*/
 
+#$p = new Person('Tim');
+#var_dump($p);
 
-$p = new Person();
-var_dump($p);
-
-#$p2 = new objekte\Person();
+#$p2 = new personen_objecte\Person('Tim');
 #var_dump($p2);
 
-#$p3 = new Person2();
+#$p3 = new Person2('Tom');
 #var_dump($p3);

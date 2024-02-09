@@ -4,29 +4,40 @@
 * Global
 */
 
+//Gültigkeitbereich
+/*
+$x = 1;
+function myFunction0() {
+    $x++;
+}
+myFunction0();
+echo $x;
+*/
+
 //Parameter
-#$x = 1
-#function myFunction1($x) {
-#    $x++;
-#    return $x;
-#}
-#$x = myFunction1($x);
-#echo $x;
+/*
+$x = 1;
+function myFunction1($x) {
+    $x++;
+    return $x;
+}
+$x = myFunction1($x);
+echo $x;
+*/
 
 
 //Global
-#$x = 1;
-#function myFunction2()
-#{
-#   $x = 1000
-#    #global $x;
-#    #$x++;
-#    $y = 42;
-#}
-#myFunction2();
-#echo $x;
-#echo $y;
-
+/*
+$x = 1;
+function myFunction2() {
+    global $x;
+    $x++;
+    //$y = 42;
+}
+myFunction2();
+echo $x;
+//echo $y;
+*/
 
 //Referenz
 #$x = 1;

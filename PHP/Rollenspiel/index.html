@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Rollenspiel</h1>
+
+    <form action="game.php" method="post">
+        <h3>Spieler 1</h3>
+        <p>
+            <label for="p1_name"></label>
+            <input id="p1_name" type="text" name="p1_name" value="Spieler 1">
+        </p>
+        <p>
+            <input type="radio" id="p1_human" name="p1_race" value="human" checked="checked">
+            <label for="p1_human">Human</label>
+            <br>
+            <input type="radio" id="p1_orc" name="p1_race" value="orc">
+            <label for="p1_orc">Orc</label>
+        </p>
+        <p>
+            <input type="radio" id="p1_strong_ring" name="p1_ring" value="strong_ring" checked="checked">
+            <label for="p1_strong_ring">Ring der Stärke</label><br>
+            <input type="radio" id="p2_lucky_ring" name="p1_ring" value="lucky_ring">
+            <label for="p2_lucky_ring">Ring des Glückes</label>
+        </p>
+
+        <hr>
+
+        <h3>Spieler 2</h3>
+        <p>
+            <label for="p2_name"></label>
+            <input id="p2_name" type="text" name="p2_name" value="Spieler 2">
+        </p>
+        <p>
+            <input type="radio" id="p2_human" name="p2_race" value="human" >
+            <label for="p2_human">Human</label>
+            <br>
+            <input type="radio" id="p2_orc" name="p2_race" value="orc" checked="checked">
+            <label for="p2_orc">Orc</label>
+        </p>
+        <p>
+            <input type="radio" id="p2_strong_ring" name="p2_ring" value="strong_ring" checked="checked">
+            <label for="p2_strong_ring">Ring der Stärke</label><br>
+            <input type="radio" id="p2_lucky_ring" name="p2_ring" value="lucky_ring">
+            <label for="p2_lucky_ring">Ring des Glückes</label>
+        </p>
+        <hr>
+        <input type="submit" name="btnStart" value="Spiel starten">
+    </form>
+
+
+</body>
+</html>

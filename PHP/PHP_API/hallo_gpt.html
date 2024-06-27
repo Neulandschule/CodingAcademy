@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+
+        <p>
+            <label for="name">Gib hier bitte deinen Namen ein:</label><br>
+            <input type="text" id="name">
+        </p>
+        <p>
+            <label for="name">Beschreibe dich:</label><br>
+            <input type="text" id="description">
+        </p>
+        
+        <button id="sendBtn">Senden</button>
+    </div>
+    <div>
+        <p id="greed_text"></p>
+    </div>
+
+    <script>
+        const name = document.getElementById('name');
+        const description = document.getElementById('description');
+        const greed_text = document.getElementById('greed_text');
+        const sendBtn = document.getElementById('sendBtn');
+
+        sendBtn.addEventListener('click', async () => {
+            greed_text.innerText = 'Loading';
+
+            try {
+
+                const response = await fetch('http://localhost/php_api/server_hallo_gpt.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ 
+                        name: name.value,
+                        description: description.value,
+                    })
+                });
+                
+                const data = await response.json();
+
+                if (data.success) {
+                    console.log(data);
+                    greed_text.innerText = data.message;
+                } else {
+                    console.log(data);
+                    greed_text.innerText = data.message;
+                }
+            } catch (error) {
+                console.error('Fehler:', error);
+                greed_text.innerText = "Es ist ein Fehler aufgetreten.";
+            }
+        })
+    </script>
+
+</body>
+</html>

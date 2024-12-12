@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="Start" id="startBtn">
+    <input type="button" value="Clear" id="clearBtn">
+    <p id="output_p"></p>
+
+    <script>
+        const startBtn = document.getElementById('startBtn');
+        const clearBtn = document.getElementById('clearBtn');
+        const output_p = document.getElementById('output_p');
+
+        startBtn.addEventListener('click', start)
+        //clearBtn.addEventListener('click', clear)
+
+        function show(name) {
+            output_p.innerText = "Hallo " + name
+        }
+
+
+        /**
+         * Normale ausgabe
+         */
+
+        /*
+        function start() {
+            show('Welt')
+        }
+        */
+
+
+        /**
+         * Verzögerte Ausgabe 
+         */
+
+        /*
+        function start() {
+            setTimeout(show, 3000, 'Welt')
+        }
+        */
+
+        /**
+         * Asynchron
+         */
+        
+        /*
+         function start() {
+            setTimeout(show, 2000, 'Welt')
+            setTimeout(show, 2000, 'World') // Auf 4000 ändern
+        }
+        */
+
+
+        /**
+         * Ausgabe stoppen
+         */
+        /*
+        let myTimeout;
+
+        function start() {
+            myTimeout = setTimeout(show, 2000, 'Welt')
+        }
+
+        function clear() {
+            clearTimeout(myTimeout)
+        }
+        */
+
+        /**
+         * Uhr
+         */
+
+         /*
+         function start() {
+            let date = new Date();
+            output_p.innerText = date.toLocaleTimeString();
+            //setTimeout(start, 1000)
+        }
+            */
+
+        /**
+         * Uhr mit Interval
+         */
+
+         /*
+        function start() {
+            setInterval(showTime, 1000)
+        }
+
+        function showTime() {
+            let date = new Date();
+            output_p.innerText = date.toLocaleTimeString();
+        }
+        */
+
+
+        /**
+         * Countdown
+         */
+
+        /*
+        let c = 5
+        let myInterval;
+        output_p.innerText = c
+
+
+        function start() {
+            myInterval = setInterval(countdown, 1000)
+        }
+
+        function countdown() {
+            c--;
+            output_p.innerText = c
+            if (c == 0) {
+                clearInterval(myInterval);
+            }
+        }
+        */
+
+
+
+
+
+    </script>
+</body>
+</html>

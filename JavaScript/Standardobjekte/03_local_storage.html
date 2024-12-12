@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /**
+         *  Objekt ansehen 
+         */
+        console.dir(window.localStorage)
+
+        /**
+         * Daten speichern 
+         * 
+         * Browser -> Entwicklertools -> Application -> Stoarage -> Local storage -> file://
+         * 
+        */
+        localStorage.setItem('name', "Tim")
+
+        /**
+         * Daten laden
+         */
+        
+        let name1;
+        name1 = localStorage.getItem('name')
+        console.log(name1)
+
+        /**
+         * Daten löschen
+         */
+
+        //localStorage.clear()
+        //name1 = localStorage.getItem('name')
+        //console.log(name1)
+
+
+
+
+    </script>
+</body>
+</html>
